@@ -1,0 +1,13 @@
+language: sh
+python: "2.7"
+os: windows
+before_install:
+  - choco install python2
+  - python -m pip install --upgrade pip
+env: PATH=/c/Python27:/c/Python27/Scripts:$PATH
+
+install:
+  - true
+
+script:
+  python -m unittest discover tests
