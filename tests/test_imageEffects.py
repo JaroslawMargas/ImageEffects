@@ -24,8 +24,9 @@ class TestImageEffects(unittest.TestCase):
 
     def test_draw_images_difference(self):
 
-        path = os.getcwd()
         draw = ImageEffects()
+        path = os.getcwd()
+        print(path)
         img1 = Image.open(path + "\\img\\celina-1.png", "r")
         img2 = Image.open(path + "\\img\\celina-2.png", "r")
         result = draw.draw_images_difference(img1, img2)
