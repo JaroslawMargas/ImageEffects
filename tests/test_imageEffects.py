@@ -24,11 +24,12 @@ class TestImageEffects(unittest.TestCase):
 
     def test_draw_images_difference(self):
 
+        path = os.getcwd()
         draw = ImageEffects()
-        img1 = Image.open("D:\\Python\\ImageEffects\\tests\\img\\celina-1.png")
-        img2 = Image.open("D:\\Python\\ImageEffects\\tests\\img\\celina-2.png")
+        img1 = Image.open(path + "\\img\\celina-1.png", "r")
+        img2 = Image.open(path + "\\img\\celina-2.png", "r")
         result = draw.draw_images_difference(img1, img2)
-        result.save("D:\\Python\\ImageEffects\\tests\\img\\result.png", 'PNG')
+        # result.save("\\img\\result.png", 'PNG')
 
         actual_compared = Image.alpha_composite(img1, result)
 
