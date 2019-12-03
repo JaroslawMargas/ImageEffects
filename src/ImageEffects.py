@@ -36,12 +36,3 @@ class ImageEffects:
                     image_result[i, j] = (r_c, g_c, b_c, a_c)
 
         return result_image
-
-
-draw = ImageEffects()
-img1 = Image.open("D:\\Python\\ImageEffects\\tests\\img\\celina-1.png")
-img2 = Image.open("D:\\Python\\ImageEffects\\tests\\img\\celina-2.png")
-result = draw.draw_images_difference(img1, img2)
-result.save("D:\\Python\\ImageEffects\\tests\\img\\result.png", 'PNG')
-img1.close()
-img2.close()
