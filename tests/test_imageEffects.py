@@ -11,8 +11,8 @@ class TestImageEffects(unittest.TestCase):
         image = ImageEffects()
         path = os.getcwd()
         print(path)
-        img1 = Image.open(path + "\\img\\celina-1.png", "r")
-        img2 = Image.open(path + "\\img\\celina-2.png", "r")
+        img1 = Image.open(path + "\\tests\\img\\celina-1.png", "r")
+        img2 = Image.open(path + "\\tests\\img\\celina-2.png", "r")
 
         actual = image.add_circle_to_image(img1, 202, 225, 10, (255, 0, 0, 128))
 
@@ -27,8 +27,8 @@ class TestImageEffects(unittest.TestCase):
         draw = ImageEffects()
         path = os.getcwd()
         print(path)
-        img1 = Image.open(path + "\\img\\celina-1.png", "r")
-        img2 = Image.open(path + "\\img\\celina-2.png", "r")
+        img1 = Image.open(path + "\\tests\\img\\celina-1.png", "r")
+        img2 = Image.open(path + "\\tests\\img\\celina-2.png", "r")
         result = draw.draw_images_difference(img1, img2)
         # result.save("\\img\\result.png", 'PNG')
 
