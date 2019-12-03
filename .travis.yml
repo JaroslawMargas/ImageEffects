@@ -7,7 +7,7 @@ before_install:
 env: PATH=/c/Python27:/c/Python27/Scripts:$PATH
 
 install:
-  - pip install -r requirements.txt 
+  - pip install -r requirements.txt
 
 script:
   python -m unittest discover tests
